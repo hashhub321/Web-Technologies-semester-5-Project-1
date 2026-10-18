@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paws Haven | Adoption application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Paws Haven</a>
+    <nav class="site-nav"><a href="index.html">Home</a><a href="media.html">Meet the pets</a><a href="register.html"
+        aria-current="page">Adopt</a><a href="services.html">Services</a><a href="portfolio.html">Happy tails</a><a
+        href="contact.html">Contact</a></nav>
+  </header>
+  <div class="banner">
+    <h1 id="page-title">Adoption application</h1>
+    <p>Tell us about you and your home. It takes five minutes.</p>
+  </div>
+  <main>
+    <form action="#" method="post" class="adopt-form">
+      <fieldset>
+        <legend>About you</legend>
+        <label for="fullname">Full name</label>
+        <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="40"
+          placeholder="Ayesha Khan">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass" required minlength="8" placeholder="At least 8 characters">
+        <label for="site">Website or social profile</label>
+        <input type="url" id="site" name="site" placeholder="https://">
+        <label for="household">People in your household</label>
+        <input type="number" id="household" name="household" min="1" max="12" value="1">
+        <label for="shelterid">Applicant ID (assigned by us)</label>
+        <input type="text" id="shelterid" value="PH-2026-001" readonly>
+        <label for="staff">Staff notes</label>
+        <input type="text" id="staff" value="Staff only" disabled>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your visit</legend>
+        <label for="visitdate">Visit date</label>
+        <input type="date" id="visitdate" name="visitdate" required min="2026-10-20">
+        <label for="visittime">Visit time</label>
+        <input type="time" id="visittime" name="visittime">
+        <label for="petcolor">Favourite pet colour</label>
+        <input type="color" id="petcolor" name="petcolor" value="#f6c453">
+        <label for="energy">Energy level you want</label>
+        <input type="range" id="energy" name="energy" min="1" max="10" value="5">
+        <label for="pettype">Pet type</label>
+        <select id="pettype" name="pettype">
+          <option value="dog" selected>Dog</option>
+          <option value="cat">Cat</option>
+          <option value="rabbit">Rabbit</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your home</legend>
+        <p>Do you have a garden?</p>
+        <label class="inline"><input type="radio" name="garden" value="yes" checked> Yes</label>
+        <label class="inline"><input type="radio" name="garden" value="no"> No</label>
+        <p>Agreements</p>
+        <label class="inline"><input type="checkbox" name="agree" required> I will give my pet regular vet care</label>
+        <label class="inline"><input type="checkbox" name="news" checked> Send me shelter news</label>
+        <label for="photo">Photo of your home</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+        <label for="why">Why do you want to adopt?</label>
+        <textarea id="why" name="why" rows="4" maxlength="300" required
+          placeholder="Tell us about your home and routine"></textarea>
+      </fieldset>
+      <button type="submit">Send application</button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2026 Paws Haven. A university web project.</p>
+  </footer>
+</body>
+
+</html>
